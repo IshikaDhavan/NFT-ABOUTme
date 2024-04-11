@@ -4,4 +4,4 @@ This is an NFT marker based project, where I have portrayed an about me page! Wh
 
 #How to use
 
-Open the AboutMe.png and then scan the QR Code, after that scan the images given below! 
+Open the AboutMe.jpeg and then scan the QR Code, after that scan the images given below! 
