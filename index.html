@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Me</title>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+        <script src="./playonclick.js"></script>
+
+        <!-- style for the loader -->
+        <style>
+            .arjs-loader {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .arjs-loader div {
+            text-align: center;
+            font-size: 1.25em;
+            color: white;
+            }
+        </style>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+    <div class="arjs-loader">
+        <div>Loading please wait...</div>
+      </div>
+
+      <a-scene
+      vr-mode-ui="enabled: false" 
+      renderer="logarithmicDepthBuffer: true"
+      embedded
+      arjs="trakingMethod: best; sourceType: webcam; debugUIEnabled: false"></a-scene>
+
+      <a-entity id="camera" position="0 0 10" camera></a-entity>
+
+      <!--Asset-->
+      <a-assets>
+        <video id="video1" src="./assets/videos/dancevid.mp4"></video>
+        <video id="video2" src="./assets/videos/catsvid.mp4"></video>
+        <video id="video3" src="./assets/videos/code.mp4"></video>
+        <video id="video4" src="./assets/videos/winter.mp4"></video>
+      </a-assets>
+
+      <!--Dance-->
+
+      <a-nft
+      type="nft"
+      url="./assets/files/dance/danceimage"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5">
+
+      <a-video
+      src="#video1"
+      width="300"
+      height="300"
+      position="150 150 -50"
+      rotation="-90 0 0"
+      play-on-click>
+      </a-video>
+
+    </a-nft>
+
+    <!--Cats-->
+
+    <a-nft
+    type="nft"
+    url="./assets/files/cats/cats"
+    smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5">
+
+    <a-video
+    src="#video2"
+    width="300"
+    height="300"
+    position="150 150 -50"
+    rotation="-90 0 0"
+    play-on-click>
+    </a-video>
+
+  </a-nft>
+
+  <!--Code-->
+
+  <a-nft
+  type="nft"
+  url="./assets/files/codes/codeimg"
+  smooth="true"
+  smoothCount="10"
+  smoothTolerance=".01"
+  smoothThreshold="5">
+
+  <a-video
+  src="#video3"
+  width="300"
+  height="300"
+  position="150 150 -50"
+  rotation="-90 0 0"
+  play-on-click>
+  </a-video>
+
+</a-nft>
+
+<!--Dance-->
+
+<a-nft
+type="nft"
+url="./assets/files/winters/winter"
+smooth="true"
+smoothCount="10"
+smoothTolerance=".01"
+smoothThreshold="5">
+
+<a-video
+src="#video4"
+width="300"
+height="300"
+position="150 150 -50"
+rotation="-90 0 0"
+play-on-click>
+</a-video>
+
+</a-nft>
+
+
+</body>
+
+</html>
